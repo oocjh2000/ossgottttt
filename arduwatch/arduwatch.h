@@ -1,14 +1,17 @@
 #define PainPin 13
 #define InputPin 12
 #define spkPin 8
-#define revivePin 2
+#define revive_Pin 2
 
-struct hero{
-   int health;
-   int atk;
-   int revive;
-   int skill_count;
-}
+public class hero{
+   private int health;
+   public int atk;
+   private int Revive_Count;
+   private int skill_count;
+
+   public void  revive(health)
+
+
 
 /*#define PainPin 13
 #define InputPin 12
