@@ -6,7 +6,7 @@
 
 학생 개개인의 의견을 수용하여 직접 발전시켜 새로운 생각으로 만들 수 있는 엄청나신 분이다.
 
-그의 화려한 필력을 볼 수 있는곳
+## 그의 화려한 필력을 볼 수 있는곳
 
 그의 다양하면서도 새롭게 학생의 장래희망을 발전시켜버린 그의 어휘에는
 
@@ -20,7 +20,7 @@
 
 생활기록부를 더 쌓아서 그의 필력을 더 영접하지 못한 학생들의 탄식을 들을 수 있다고 한다.
 
-그의 엄청난 실력들
+## 그의 엄청난 실력들
 
 이 큰 학교에서 그의 피아노 실력은 손에 꼽히는 수준으로 높으며
 
@@ -55,4 +55,4 @@ In this big school, his piano skills are as high as his hand
 
 He majored in classics at university and has a high level of ability to teach technology related subjects on campus.
 
-His ability to cover beyond math and arts has helped to create a strong bond with students. 
+His ability to cover beyond math and arts has helped to create a strong bond with students.

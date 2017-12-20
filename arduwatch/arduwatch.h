@@ -1,11 +1,19 @@
-#include<time.h>
-
-
 #define PainPin 13
 #define InputPin 12
 #define spkPin 8
 #define revivePin 2
-#define mode
+
+struct hero{
+   int health;
+   int atk;
+   int revive;
+   int skill_count;
+}
+
+/*#define PainPin 13
+#define InputPin 12
+#define spkPin 8
+#define revivePin 2
 
 bool hit;
 
@@ -44,4 +52,4 @@ void loop() {
   else{//die
     digitalWrite(spkPin,HIGH);
   }
-}
+}*/
