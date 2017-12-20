@@ -1,17 +1,28 @@
 #define PainPin 13
 #define InputPin 12
-#define spkPin 8
-#define revive_Pin 2
+#define SpkPin 8
+#define Revive_Pin 2
 
-public class hero{
-   private int health;
-   public int atk;
+ class hero{
+   private int HP_Full
+   private int HP_Now;
    private int Revive_Count;
-   private int skill_count;
+   private int Skill_count;
 
-   public void  revive(health)
+   void Use_Skill(){
+     if(Skill_count)
 
+     Skill_count--;
+   }
 
+   void  revive(){
+     if(Revive_Count){
+       HP_Now=HP_Full;
+       Revive_Count--;
+     }
+   }
+
+}
 
 /*#define PainPin 13
 #define InputPin 12
