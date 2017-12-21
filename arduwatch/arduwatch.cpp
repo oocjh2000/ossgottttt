@@ -1,26 +1,38 @@
-class hero{
-private: int HP_Full;
-		 int HP_Now;
-		 int Revive_Count;
-		 int Skill_Count;
+#include "arduwatch.h"
 
- hero(int _HP_Full,int _Revive_Count,int _Skill_Count){
-    HP_Full=_HP_Full;
-    Revive_Count=_Revive_Count;
-    Skill_Count=_Skill_Count;
-  }
 
-  void Use_Skill(){
-    if(Skill_Count)
 
-    Skill_Count--;
-  }
+Skill::Skill(int _Skill_Type, int _Skill_Power, int _Skill_Cooldown, int _Skill_Count) //스킬생성자 17-12-21 차재훈
+{
+	Skill_Type = _Skill_Type;
+	Skill_Power = _Skill_Power;
+	Skill_Cooldown = _Skill_Power;
+	Skill_Count = _Skill_Count;
+}
 
-  void  revive(){
-    if(Revive_Count){
-      HP_Now=HP_Full;
-      Revive_Count--;
-    }
-  }
+void Skill::Skill_Use()//스킬사용함수 (구현중) 17-12-21 차재훈
+{
+	switch (Skill_Type)//스킬추가시 여기와 열거형에  추가해주세요  Case 1000부터시작
+	{
+	case 1000:
+		break;
 
-};
+	default:
+		
+		break;
+	}
+}
+
+hero::hero(int _HP_Full, int _Revive_Count)//히어로 생성자 17-12-21 차재훈
+{
+	HP_Full = _HP_Full;
+	Revive_Count = _Revive_Count;
+}
+
+void hero::revive()//부활함수 17-12-21 차재훈
+{
+	if (Revive_Count) {
+		HP_Now = HP_Full;
+		Revive_Count--;
+	}
+}
