@@ -1,4 +1,4 @@
-# 김형중, 그는 누구인가
+# 김XX, 그는 누구인가
 
 우매한 민중은 아무도 그의 깊은 뜻을 이해하지 못하리라고 많은 학생들이 장담한다.
 
@@ -27,7 +27,7 @@
 대학에서 클래식을 전공하고 교내에서는 기술 관련 교과를 가르칠 정도로 높은 지도실력을 가진다.
 
 문 이과, 예체능을 넘어선 그의 커버능력은 학생들과의 큰 유대 관계를 만드는데 일조하였다.
-# Kim Hyung Joong, who is he
+# Kim, who is he
 
 Many students promise that no foolish people will understand his deep meaning.
 
