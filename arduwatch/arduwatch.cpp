@@ -12,13 +12,12 @@ Skill::Skill(int _Skill_Type, int _Skill_Power, int _Skill_Cooldown, int _Skill_
 
 void Skill::Skill_Use()//스킬사용함수 (구현중) 17-12-21 차재훈
 {
-	switch (Skill_Type)//스킬추가시 여기와 열거형에  추가해주세요  Case 1000부터시작
+	switch (Skill_Type)//스킬추가시 여기와 열거형에  추가해주세요
 	{
-	case 1000:
+	case :Skill_Type_Heal
 		break;
-
 	default:
-		
+
 		break;
 	}
 }
