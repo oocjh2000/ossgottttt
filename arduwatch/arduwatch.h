@@ -9,7 +9,7 @@
 #define Revive_Pin 2
 //스킬분류 열거 스킬추가시 여기와 arduwatch.cpp파일의 Skill_Use수정해주세요  17-12-21 차재훈
 enum Skill_Type {
-	Skill_Type_Heal = 1000,
+	Skill_Type_Heal = 20,
 	Skill_Type_SuperAtk,
 	Skill_Type_RivivialPlus,
 	Skill_Type_Provocation,
@@ -20,19 +20,26 @@ private:
 	int Skill_Power, Skill_Cooldown, Skill_Count, Skill_Type;
 
 	Skill(int _Skill_Type, int _Skill_Power, int _Skill_Cooldown, int _Skill_Count);
-	void Skill_Use();
+	
 	  
 // 17-12-21 차재훈
 
 };
- class hero{
+ class Hero{
  private: int HP_Full;
 		  int HP_Now;
 		  int Revive_Count;
 
-	 hero(int _HP_Full, int _Revive_Count);
+	 Hero(int _HP_Full, int _Revive_Count);
 
-	 void  revive();
+	
+
 	 // 17-12-21 차재훈
  };
 
+ class Network {
+
+ };//18-1-3
+ class Game: Hero , Skill , Network {
+
+ };//18-1-3
