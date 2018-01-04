@@ -20,13 +20,25 @@ void main()
 	cout << "스킬쿨다운=" << asdf.Skill_Show_Cooldown() << endl;
 	cout << "스킬카운트=" << asdf.Skill_Show_Count() << endl;
 	cout << "스킬타입=" << asdf.Skill_Show_Type() << endl;
-	asdf.Skill_Set(3, 5, 78, 7);
-	cout << "============================================="<<endl;
+	asdf.Skill_Set();
+	cout << "=============스킬 초기설정테스트============="<<endl;
 	cout << "스킬파워=" << asdf.Skill_Show_Power() << endl;
 	cout << "스킬쿨다운=" << asdf.Skill_Show_Cooldown() << endl;
 	cout << "스킬카운트=" << asdf.Skill_Show_Count() << endl;
 	cout << "스킬타입=" << asdf.Skill_Show_Type() << endl;
-	cout << "=============================================" << endl;
+	cout << "============스킬설정함수테스트===============" << endl;
+	Wepon assult;
+	cout << "무기파워" << assult.Wepon_Show_Power() << endl;
+	cout << "무기재장전" << assult.Wepon_Show_Reload() << endl;
+	cout << "무기탄창" << assult.Wepon_Show_Magazine() << endl;
+	cout << "발사속도" << assult.Wepon_Show_Speed() << endl;
+	cout << "============무기초기설정테스트===============" << endl;
+	assult.Wepon_Set(30,5,100,5000);
+	cout << "무기파워" << assult.Wepon_Show_Power() << endl;
+	cout << "무기재장전" << assult.Wepon_Show_Reload() << endl;
+	cout << "무기탄창" << assult.Wepon_Show_Magazine() << endl;
+	cout << "발사속도" << assult.Wepon_Show_Speed() << endl;
+	cout << "============무기설정함수테스트===============" << endl;
 	system("pause");
 	
 }

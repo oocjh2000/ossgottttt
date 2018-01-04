@@ -48,13 +48,6 @@ int Hero::Hero_Show_ReviveCount()
 
 
 
-void Skill::Skill_Set(int Power, int Cooldown, int Count, int Type)
-{
-	Skill_Power = Power;
-	Skill_Cooldown = Cooldown;
-	Skill_Count = Count;
-	Skill_Type = Type;
-}
 
 int Skill::Skill_Show_Power()
 {
@@ -84,3 +77,36 @@ void Game::revive()
 {
 	
 }
+
+void Wepon::Wepon_Set(int _Wepon_Power, int _Wepon_Reload, int _Wepon_Magazine, int Wepon_Speed)
+{
+	Wepon_Magmzine = _Wepon_Magazine;
+	Wepon_Power = _Wepon_Power;
+	Wepon_Reload = _Wepon_Reload;
+	Wepon_Speed = Wepon_Speed;
+}
+
+int Wepon::Wepon_Show_Power()
+{
+	int WSP = Wepon_Power;
+	return WSP;
+}
+
+int Wepon::Wepon_Show_Reload()
+{
+	int WSR = Wepon_Reload;
+	return WSR;
+}
+
+int Wepon::Wepon_Show_Magazine()
+{
+	int WSM = Wepon_Magmzine;
+	return WSM;
+}
+
+int Wepon::Wepon_Show_Speed()
+{
+	int WSS = Wepon_Speed;
+	return WSS;
+}
+

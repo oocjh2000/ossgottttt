@@ -33,7 +33,13 @@ public:
 		Skill_Count = _Skill_Count;
 		Skill_Type = _Skill_Type;
 	}
-	void Skill_Set(int Power,int Cooldown,int Count, int Type);
+	void Skill_Set() 
+	{
+		Skill_Power = 1;
+		Skill_Count = 1;
+		Skill_Cooldown = 1;
+		Skill_Type = Skill_Type_Heal;
+	};
 
 	//스킬상태 출력함수
 	int Skill_Show_Power();
@@ -72,11 +78,35 @@ public:
 
  };// 17-12-21 차재훈
 
+class Wepon {
+private:
+	int Wepon_Power;
+	int Wepon_Reload;
+	int Wepon_Magmzine;
+	int Wepon_Speed;
+public:
+	Wepon() {
+		Wepon_Magmzine = 30;//millis
+		Wepon_Power = 20;
+		Wepon_Reload = 3;
+		Wepon_Speed = 100;
+	}
+	void Wepon_Set(int _Wepon_Power,int _Wepon_Reload,int _Wepon_Magazine,int Wepon_Speed);
+
+	//무기상태 출력함수 2018 01 04 차재훈
+	int Wepon_Show_Power();
+	int Wepon_Show_Reload();
+	int Wepon_Show_Magazine();
+	int Wepon_Show_Speed();
+
+};//2018 01 04 차재훈
+
+
  class Network
  {
 
  };//18-1-3
- class Game : Hero , Skill , Network
+ class Game : Hero, Skill, Network, Wepon
  {
 	 void revive();
  };//18-1-3
