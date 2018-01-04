@@ -3,6 +3,8 @@
 2017/9/9-2017/9/18 : https://github.com/KGSHS-ResearchClub/UnjuWatch
 9/18~NOW : https://github.com/oocjh2000/unjuwatch_dev/commits/master
 */
+#pragma once
+
 #define PainPin 13
 #define InputPin 12
 #define SpkPin 8
@@ -45,11 +47,11 @@ public:
 	// 17-12-21 Â÷ÀçÈÆ
  };
 
- class Network
- {
+ //class Network
+ //{
 
- };//18-1-3
- class Game : Hero , Skill , Network
- {
+ //};//18-1-3
+ //class Game : Hero , Skill , Network
+ //{
 
- };//18-1-3
+ //};//18-1-3
