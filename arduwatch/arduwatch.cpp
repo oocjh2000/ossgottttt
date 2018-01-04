@@ -34,13 +34,23 @@ Skill::Skill(int _Skill_Type, int _Skill_Power, int _Skill_Cooldown, int _Skill_
 void Hero::Hero_Set(int _HP_Full, int _Revive_Count)
 {
 	HP_Full = _HP_Full;
+	HP_Now = HP_Full;
 	Revive_Count = _Revive_Count;
 }
 
 int Hero::Hero_Show_HP_Now()
 {
-	return HP_Now;
+	int hp = HP_Now;
+	return hp;
 }
+
+int Hero::Hero_Show_ReviveCount()
+{
+	int rc = Revive_Count;
+	return rc;
+}
+
+
 
 
 

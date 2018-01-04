@@ -39,11 +39,13 @@ public:
 	Hero()
 	{
 		HP_Full = 100, Revive_Count = 10;
+		HP_Now = HP_Full;
 	}
 	//Hero(int HP_Full = 100, int Revive_Count = 10) {}
 	void Hero_Set(int _HP_Full, int _Revive_Count);
+	
 	int Hero_Show_HP_Now();
-
+	int Hero_Show_ReviveCount();
 	// 17-12-21 Â÷ÀçÈÆ
  };
 
