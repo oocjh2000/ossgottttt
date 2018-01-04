@@ -2,30 +2,7 @@
 
 
 
-Skill::Skill(int _Skill_Type, int _Skill_Power, int _Skill_Cooldown, int _Skill_Count) //스킬생성자 17-12-21 차재훈
-{
-	Skill_Type = _Skill_Type;
-	Skill_Power = _Skill_Power;
-	Skill_Cooldown = _Skill_Power;
-	Skill_Count = _Skill_Count;
-}
 
-/*void Skill::Skill_Use()
-{
-	if (Skill_Type_Heal) {
-		
-	}
-	else if (Skill_Type_Provocation) {
-
-	}
-	else if (Skill_Type_RivivialPlus) {
-
-	}
-	else if (Skill_Type_Provocation) {
-
-	}
-	 
-}*/
 
 
 
@@ -37,6 +14,20 @@ void Hero::Hero_Set(int _HP_Full, int _Revive_Count)
 	HP_Now = HP_Full;
 	Revive_Count = _Revive_Count;
 }
+
+void Hero::Hero_Discount_HP(int atk)
+{
+	HP_Now = HP_Now - atk;
+}
+
+
+
+void Hero::Hero_Discount_ReviveCount()
+{
+	HP_Now = HP_Full;
+	Revive_Count--;
+}
+
 
 int Hero::Hero_Show_HP_Now()
 {
@@ -56,15 +47,40 @@ int Hero::Hero_Show_ReviveCount()
 
 
 
-/*void hero::revive()//부활함수 17-12-21 차재훈
+
+void Skill::Skill_Set(int Power, int Cooldown, int Count, int Type)
 {
-	if (Revive_Count) {
-		HP_Now = HP_Full;
-		Revive_Count--;
-	}
-}*/
+	Skill_Power = Power;
+	Skill_Cooldown = Cooldown;
+	Skill_Count = Count;
+	Skill_Type = Type;
+}
 
+int Skill::Skill_Show_Power()
+{
+	int ssp = Skill_Power;
+	return ssp;
+}
 
+int Skill::Skill_Show_Cooldown()
+{
+	int ssc = Skill_Cooldown;
+	return ssc;
+}
 
+int Skill::Skill_Show_Count()
+{
+	int ssu = Skill_Count;
+	return ssu;
+}
 
+int Skill::Skill_Show_Type()//문자열로 수정할것
+{
+	int sst = Skill_Type;
+	return sst;
+}
 
+void Game::revive()
+{
+	
+}
