@@ -15,31 +15,41 @@ enum Skill_Type {
 	Skill_Type_Provocation,
 };
 
-class Skill {
-private:
+class Skill
+{
 	int Skill_Power, Skill_Cooldown, Skill_Count, Skill_Type;
 
+public:
 	Skill(int _Skill_Type, int _Skill_Power, int _Skill_Cooldown, int _Skill_Count);
 	
 	  
 // 17-12-21 Â÷ÀçÈÆ
-
 };
- class Hero{
- private: int HP_Full;
-		  int HP_Now;
-		  int Revive_Count;
 
-	 Hero(int _HP_Full, int _Revive_Count);
+class Hero
+{
+private:
+	int HP_Full;
+	int HP_Now;
+	int Revive_Count;
 
-	
+public:
+	Hero()
+	{
+		HP_Full = 100, Revive_Count = 10;
+	}
+	//Hero(int HP_Full = 100, int Revive_Count = 10) {}
+	void Hero_Set(int _HP_Full, int _Revive_Count);
+	int Hero_Show_HP_Now();
 
-	 // 17-12-21 Â÷ÀçÈÆ
+	// 17-12-21 Â÷ÀçÈÆ
  };
 
- class Network {
+ class Network
+ {
 
  };//18-1-3
- class Game: Hero , Skill , Network {
+ class Game : Hero , Skill , Network
+ {
 
  };//18-1-3

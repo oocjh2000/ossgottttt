@@ -27,11 +27,24 @@ Skill::Skill(int _Skill_Type, int _Skill_Power, int _Skill_Cooldown, int _Skill_
 	 
 }*/
 
-Hero::Hero(int _HP_Full, int _Revive_Count)//히어로 생성자 17-12-21 차재훈
+
+
+
+
+void Hero::Hero_Set(int _HP_Full, int _Revive_Count)
 {
 	HP_Full = _HP_Full;
 	Revive_Count = _Revive_Count;
 }
+
+int Hero::Hero_Show_HP_Now()
+{
+	return HP_Now;
+}
+
+
+
+
 
 /*void hero::revive()//부활함수 17-12-21 차재훈
 {
