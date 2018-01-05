@@ -13,7 +13,7 @@ mail oocjh200@gmail.com
 #define InputPin 12
 #define SpkPin 8
 #define Revive_Pin 2
-//스킬분류 열거 스킬추가시 여기와 arduwatch.cpp파일의 Skill_Use수정해주세요  17-12-21 차재훈
+
 enum Skill_Type {
 	Skill_Type_Heal = 20,
 	Skill_Type_SuperAtk,
@@ -26,14 +26,14 @@ class Skill
 	int Skill_Power, Skill_Cooldown, Skill_Count, Skill_Type;
 
 public:
-	Skill(int _Skill_Power, int _Skill_Cooldown, int _Skill_Count, int _Skill_Type)
+	void Skill_Set(int _Skill_Power, int _Skill_Cooldown, int _Skill_Count, int _Skill_Type)
 	{
 		Skill_Power = _Skill_Power;
 		Skill_Cooldown = _Skill_Cooldown;
 		Skill_Count = _Skill_Count;
 		Skill_Type = _Skill_Type;
 	}
-	void Skill_Set() 
+	Skill() 
 	{
 		Skill_Power = 1;
 		Skill_Count = 1;
@@ -42,10 +42,10 @@ public:
 	};
 
 	//스킬상태 출력함수
-	int Skill_Show_Power();
-	int Skill_Show_Cooldown();
-	int Skill_Show_Count();
-	int Skill_Show_Type();
+	int Skill_Output_Power();
+	int Skill_Output_Cooldown();
+	int Skill_Output_Count();
+	int Skill_Output_Type();
 	//스킬상태 출력함수 2018 01 04 차재훈
 	  
 // 17-12-21 차재훈
@@ -67,13 +67,14 @@ public:
 	
 	void Hero_Set(int _HP_Full, int _Revive_Count); 
 
-		void Hero_Discount_HP(int atk);
-		void Hero_Discount_ReviveCount();
+	void Hero_Discount_HP(int atk);
+
+	void Hero_Discount_ReviveCount();
 
 	
 	//영웅상태 출력함수
-	int Hero_Show_HP_Now();
-	int Hero_Show_ReviveCount();
+	int Hero_Output_HP_Now();
+	int Hero_Output_ReviveCount();
 	// 2018 01 04 차재훈
 
  };// 17-12-21 차재훈
@@ -94,10 +95,10 @@ public:
 	void Wepon_Set(int _Wepon_Power,int _Wepon_Reload,int _Wepon_Magazine,int Wepon_Speed);
 
 	//무기상태 출력함수 2018 01 04 차재훈
-	int Wepon_Show_Power();
-	int Wepon_Show_Reload();
-	int Wepon_Show_Magazine();
-	int Wepon_Show_Speed();
+	int Wepon_Output_Power();
+	int Wepon_Output_Reload();
+	int Wepon_Output_Magazine();
+	int Wepon_Output_Speed();
 
 };//2018 01 04 차재훈
 
@@ -108,5 +109,11 @@ public:
  };//18-1-3
  class Game : Hero, Skill, Network, Wepon
  {
-	 void revive();
+ public:
+	 Game() 
+	 {
+
+	 }
+	 void Game_Judge_Damage(int damage);
+	 void Game_Start();
  };//18-1-3
