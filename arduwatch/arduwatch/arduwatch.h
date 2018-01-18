@@ -1,9 +1,4 @@
-/*
-arduwatch.h - Library for  Arduino Network FPSgame.
-Created by Jaehoon Cha, September 9, 2018.
-Released MIT.
-
-아두워치 개발중
+/*아두워치 개발중
 2017년 9/9 ~NOW 
 2017/9/9-2017/9/18 : https://github.com/KGSHS-ResearchClub/UnjuWatch
 9/18~NOW : https://github.com/oocjh2000/unjuwatch_dev/commits/master
@@ -47,10 +42,10 @@ public:
 	};
 
 	//스킬상태 출력함수
-	int Skill_print_Power();
-	int Skill_print_Cooldown();
-	int Skill_print_Count();
-	int Skill_print_Type();
+	int Skill_Output_Power();
+	int Skill_Output_Cooldown();
+	int Skill_Output_Count();
+	int Skill_Output_Type();
 	//스킬상태 출력함수 2018 01 04 차재훈
 	  
 // 17-12-21 차재훈
@@ -72,16 +67,14 @@ public:
 	
 	void Hero_Set(int _HP_Full, int _Revive_Count); 
 
-	void Hero_Discount_HP(int atk)
-	{
-		HP_Now = HP_Now - atk;
-	}
+	void Hero_Discount_HP(int atk);
 
-	void Hero_Revive();
+	void Hero_Discount_ReviveCount();
+
 	
 	//영웅상태 출력함수
-	int Hero_print_HP_Now();
-	int Hero_print_ReviveCount();
+	int Hero_Output_HP_Now();
+	int Hero_Output_ReviveCount();
 	// 2018 01 04 차재훈
 
  };// 17-12-21 차재훈
@@ -91,7 +84,6 @@ private:
 	int Wepon_Power;
 	int Wepon_Reload;
 	int Wepon_Magmzine;
-	int Magazine_Full;
 	int Wepon_Speed;
 public:
 	Wepon() {
@@ -99,21 +91,16 @@ public:
 		Wepon_Power = 20;
 		Wepon_Reload = 3;
 		Wepon_Speed = 100;
-		Magazine_Full = 30;
 	}
-	void Wepon_Set(int _Wepon_Power,int _Wepon_Reload,int _Wepon_Magazine,int _Wepon_Speed, int _Magazine_Full);
+	void Wepon_Set(int _Wepon_Power,int _Wepon_Reload,int _Wepon_Magazine,int Wepon_Speed);
 
 	//무기상태 출력함수 2018 01 04 차재훈
-	int Wepon_print_Power();
-	int Wepon_print_Reload();
-	int Wepon_print_Magazine();
-	int Wepon_print_Speed();
-	//
+	int Wepon_Output_Power();
+	int Wepon_Output_Reload();
+	int Wepon_Output_Magazine();
+	int Wepon_Output_Speed();
 
-	int Shot(int atk);//2018 01 18 차재훈
-	int Reload();
 };//2018 01 04 차재훈
-
 
 
  class Network
