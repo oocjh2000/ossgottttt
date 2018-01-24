@@ -17,6 +17,12 @@ void Hero::Hero_Set(int _HP_Full, int _Revive_Count)
 
 
 
+void Hero::Hero_Revive()
+{
+	HP_Now = HP_Full;
+	Revive_Count--;
+}
+
 int Hero::Hero_print_HP_Now()
 {
 	int hp = HP_Now;
@@ -105,6 +111,11 @@ int Wepon::Shot(int atk)
 {
 	Wepon_Magmzine--;
 	return atk;
+}
+
+void Wepon::DiscountMag()
+{
+	Wepon_Magmzine--;
 }
 
 int Wepon::Reload()

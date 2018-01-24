@@ -111,6 +111,7 @@ public:
 	//
 
 	int Shot(int atk);//2018 01 18 Â÷ÀçÈÆ
+	void DiscountMag();
 	int Reload();
 };//2018 01 04 Â÷ÀçÈÆ
 
