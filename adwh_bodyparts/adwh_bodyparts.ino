@@ -23,9 +23,10 @@ void setup()
 bool seriSt = LOW;
 void loop() // run over and over
 {
-  atk = mySerial.parseInt();
-  while (mySerial.available()) {
+  while (mySerial.available() > 0) {
+    atk = mySerial.parseInt();
     if (0 < atk && atk < 20) {
+
       park.Hero_Discount_HP(atk);
       Serial.print(atk);
 
@@ -35,11 +36,11 @@ void loop() // run over and over
 
 
       atk = 0;
-      delay(500);
+      delay(1000);
       break;
     }
 
   }
-  atk = -1;
+  atk = 0;
 }
 
