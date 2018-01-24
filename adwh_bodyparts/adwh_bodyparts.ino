@@ -12,7 +12,7 @@ void setup()
   while (!Serial) {
     ; // wait for serial port to connect. Needed for Leonardo only
   }
-
+pinMode(7,OUTPUT);
 
   Serial.println("Goodnight moon!");
 
@@ -40,6 +40,12 @@ void loop() // run over and over
       break;
     }
 
+  }
+  if (park.Hero_print_HP_Now() <= 0) {
+    digitalWrite(7, HIGH);
+
+  } else {
+    digitalWrite(7, LOW);
   }
   atk = 0;
 }
