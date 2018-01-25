@@ -42,9 +42,7 @@ void loop() // run over and over
       Serial.print("HP_NOW=");
       Serial.println(park.Hero_print_HP_Now());
     hits++;
-digitalWrite(7,HIGH);
-delay(30);
-digitalWrite(7,LOW);
+tone(7, 262, 300);
       atk = 0;
       delay(1000);
       break;
@@ -52,7 +50,7 @@ digitalWrite(7,LOW);
 
   }
   if (park.Hero_print_HP_Now() <= 0) {
-    digitalWrite(7, HIGH);
+tone(7, 31, 4000);
     Serial.println("You Died");
     hits=1;
      for(int i;i<=50;i++){
