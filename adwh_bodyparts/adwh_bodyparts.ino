@@ -5,6 +5,7 @@ short hits=1;
 SoftwareSerial mySerial(2, 3); // RX, TX
 Hero park;
 int atk = 0;
+int score=100;
 void setup()
 {
   // Open serial communications and wait for port to open:
@@ -53,23 +54,27 @@ digitalWrite(7,LOW);
   if (park.Hero_print_HP_Now() <= 0) {
     digitalWrite(7, HIGH);
     Serial.println("You Died");
-    atk=0;
     hits=1;
      for(int i;i<=50;i++){
       Serial.print(':');
       atk=0;
       delay(50);
+      score= score+atk;
+      atk=0;
      }
     park.Hero_Revive();
+    game++;
+    Serial.print("Score=");
+    Serial.println(score);
     Serial.println("You are revived");
     Serial.print(game);
-    Serial.println("'s game");
+    Serial.println("   game");
 
   } else {
     digitalWrite(7, LOW);
   atk=0;
   }
   atk = 0;
-  game++;
+  
 }
 
